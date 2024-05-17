@@ -95,8 +95,14 @@ def main():
         if mode == "input":  # 텍스트 입력 모드일 때 입력 중인 텍스트 표시
             font = pygame.font.Font('Maplestory Bold.ttf', 24)
             prompt_text = "텍스트를 입력하세요 : " + text_input
+            prompt_text2 = "이 작품은 여러분의 단어로 문장을 완성하여"
+            prompt_text3 = "우리가 함께 만드는 메시지를 통해 소통과 협력의 중요성을 강조합니다."
             input_surf = font.render(prompt_text, True, (0, 0, 0))
-            screen.blit(input_surf, (150, 250))  # 화면의 상단에 텍스트 입력 표시
+            input_surf2 = font.render(prompt_text2, True, (0, 0, 0))
+            input_surf3 = font.render(prompt_text3, True, (0, 0, 0))
+            screen.blit(input_surf, (100, 250))
+            screen.blit(input_surf2, (100, 400))# 화면의 상단에 텍스트 입력 표시
+            screen.blit(input_surf3, (100, 430))# 화면의 상단에 텍스트 입력 표시
         
         space.step(1/50.0)
         pygame.display.flip()
